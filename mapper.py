@@ -32,7 +32,7 @@ for word in words:
     except KeyError:
         input_file = os.environ['map_input_file']
 
-    name = re.split("_", input_file)[0]
+    name = re.split(".", input_file)[0]
 
     if(word in d):
         print ('%s\t%d' % (name, int(d[word])))
