@@ -17,27 +17,27 @@ if __name__ == "__main__":
 
     goog10Day = googPrice.window(10,1)\
                          .reduce(lambda x, y: (x + y) / 2.0)\
-                         .map(lambda m: "10 day average: " + $tr(m))
+                         .map(lambda m: "10 day average: " + str(m))
                          # .map(lambda price: (price, 1))\
                          # .reduce(lambda x, y: (x + y) / 2.0)\
                          # .filter()
-                         # .map(lambda m: "10 day average: " + tr(m))
+                         # .map(lambda m: "10 day average: " + str(m))
     goog40Day = googPrice.window(40,1)\
                          .reduce(lambda x, y: (x + y) / 2.0)\
-                         .map(lambda m: "40 day average: " + $tr(m))
+                         .map(lambda m: "40 day average: " + str(m))
                          # .map(lambda price: (price, 1))\
                          # .reduce(lambda x, y: (x + y) / 2.0)\
-                         # .map(lambda m: "40 day average: " + tr(m))
+                         # .map(lambda m: "40 day average: " + str(m))
 
     # msft10Day = msftPrice.window(10,1)\
                          # .map(lambda price: (price, 1))\
                          # .reduce(lambda x, y: (x + y) / 2.0)\
                          # .filter()
-                         # .map(lambda m: "10 day average: " + tr(m))
+                         # .map(lambda m: "10 day average: " + str(m))
     # msft40Day = msftPrice.window(40,1)\
                          # .map(lambda price: (price, 1))\
                          # .reduce(lambda x, y: (x + y) / 2.0)\
-                         # .map(lambda m: "40 day average: " + tr(m))
+                         # .map(lambda m: "40 day average: " + str(m))
  
     goog10Day.pprint()
     goog40Day.pprint()
