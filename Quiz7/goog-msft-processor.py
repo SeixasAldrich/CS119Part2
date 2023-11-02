@@ -12,8 +12,8 @@ if __name__ == "__main__":
 
     rawPrices = ssc.socketTextStream(sys.argv[1], int(sys.argv[2]))
 
-    googPrice = rawPrices.map(lambda l: (l.split(" ")(1)))
-    msftPrice = rawPrices.map(lambda l: (l.split(" ")(2)))
+    googPrice = rawPrices.map(lambda l: (l.split(" ")[1]))
+    msftPrice = rawPrices.map(lambda l: (l.split(" ")[2]))
  
     googPrice.pprint()
     msftPrice.pprint()
