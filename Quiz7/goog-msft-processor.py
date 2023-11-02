@@ -46,9 +46,9 @@ if __name__ == "__main__":
 
     bOrsgoog = goog10Day.window(2,1)[0].join(goog40Day.window(2,1)[0]).reduce(lambda x, y: 1 if x > y else 0)
 
-    if (bOrsgoog == 1 && bOrsYestgoog == 0):
+    if (bOrsgoog == 1 and bOrsYestgoog == 0):
         print(date + "buy" + goog)
-    elif (bOrsgoog == 0 && bOrsYestgoog == 1):
+    elif (bOrsgoog == 0 and bOrsYestgoog == 1):
         print(date + "sell" + goog)
         
  
